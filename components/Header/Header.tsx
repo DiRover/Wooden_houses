@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FC } from 'react';
 import ROUTES from '../../src/routes';
+import Telephone from './Telephone';
+import { Select } from '@mui/material';
 
 interface Props {
   links: Array<string>;
@@ -15,7 +17,7 @@ const Container = styled.div`
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1200px;
@@ -54,6 +56,8 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
             return <TextLink key={link}>{link}</TextLink>;
           })}
         </Nav>
+        <Telephone />
+        <Select />
       </StyledHeader>
     </Container>
   );
