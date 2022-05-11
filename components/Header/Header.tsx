@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import ROUTES from '../../src/routes';
 import Telephone from './Telephone';
-import { Select } from '@mui/material';
+import CustomSelect from './CustomSelect';
 
 interface Props {
   links: Array<string>;
@@ -56,8 +56,8 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
             return <TextLink key={link}>{link}</TextLink>;
           })}
         </Nav>
+        <CustomSelect />
         <Telephone />
-        <Select />
       </StyledHeader>
     </Container>
   );
