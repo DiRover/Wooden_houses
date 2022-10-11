@@ -1,15 +1,15 @@
-import { FC } from "react";
+import {FC, memo} from 'react';
 import Image from 'next/image';
-import { telephone } from "../../src/services/service_data";
-import Typography from "@mui/material/Typography";
+import {telephone} from '../../src/services/service_data';
+import Typography from '@mui/material/Typography';
 
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 const Container = styled.div`
-display: flex;
+    display: flex;
 `;
 
-const Telephone: FC = (): JSX.Element => {
+const Telephone: FC = memo((): JSX.Element => {
     return (
         <Container>
             <Image src="/icons/Vector.svg" width={20} height={20} alt="telephone" />
@@ -18,6 +18,6 @@ const Telephone: FC = (): JSX.Element => {
             </Typography>
         </Container>
     );
-};
+});
 
 export default Telephone;
